@@ -7,7 +7,7 @@ const bcrypt = require('bcryptjs');
 module.exports.adminLogin = async (req, res) => {
   const { email, password } = req.body;
   try {
-    const admin = await Admin.login(email, password); 
+    const admin = await Admin.login(email, password);
     const token = jwt.sign(
       { adminId: admin._id, email: admin.email },
       process.env.JWT_SECRET_KEY || "poiuytrewqasdfghjklmnbvcxz", // You should store your secret key in an env variable
@@ -96,7 +96,7 @@ exports.getAdmin = async (req, res) => {
   try {
     const adminId = req.params.adminId;
     const admin = await Admin.findById(adminId);
-    
+
     if (!admin) {
       return res.status(404).json({ error: 'Admin not found' });
     }
