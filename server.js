@@ -24,7 +24,8 @@ const paymentRoutes = require("./src/routes/paymentproof.routes");
 
 
 // connect to database
-const MONGODB_URI = 'mongodb://127.0.0.1:27017/zibeh';
+// const MONGODB_URI = 'mongodb://127.0.0.1:27017/zibeh';
+const MONGODB_URI = "mongodb+srv://abdulbasid:abdul123@alistiqama.iupxq.mongodb.net/zibehSystem?retryWrites=true&w=majority&appName=alIstiqama"
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
