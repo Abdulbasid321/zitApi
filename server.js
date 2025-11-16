@@ -76,7 +76,7 @@ io.on('connection', (socket) => {
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
 app.use(cors({
-  origin: ['http://localhost:3000', 'http://localhost:3001','https://zit-frontend-9rjc.vercel.app/'],
+  origin: ['http://localhost:3000', 'http://localhost:3001','https://zit-frontend-9rjc.vercel.app'],
   credentials: true
 }));
 app.use(cookieParser());
