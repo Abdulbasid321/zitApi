@@ -20,8 +20,7 @@ const resultRoutes = require('./src/routes/result.routes');
 const announcementRoutes = require("./src/routes/announcement.routes");
 const documentRoutes = require("./src/routes/document.routes");
 const paymentRoutes = require("./src/routes/paymentproof.routes");
-
-
+const registrationRoutes = require('./src/routes/registration.routes');
 
 // connect to database
 // const MONGODB_URI = 'mongodb://127.0.0.1:27017/zibeh';
@@ -114,6 +113,7 @@ app.use("/announcements", announcementRoutes);
 app.use(resultRoutes);
 app.use("/documents", documentRoutes);
 app.use("/payments", paymentRoutes);
+app.use('/api/register', registrationRoutes);
 
 // start server using the HTTP server, not app.listen
 const PORT = process.env.PORT || 5000;
